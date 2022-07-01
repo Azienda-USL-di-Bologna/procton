@@ -1,0 +1,188 @@
+<!DOCTYPE web-app 
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" 
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+    <display-name>Procton</display-name>
+
+    <description>Procton Project</description>
+
+    <context-param>
+    	<param-name>myparam</param-name>
+    	<param-value>my value</param-value>
+    </context-param>
+
+    <context-param>
+    	<param-name>receiveSignedFilesDir</param-name>
+    	<param-value>signedTemp</param-value>
+    </context-param>
+
+    <context-param>
+	<param-name>ReceiveSignedFileServletName</param-name>
+	<param-value>ReceiveSignedFile</param-value>
+    </context-param>
+
+    <context-param>
+	<param-name>PrintPdfAppletPath</param-name>
+	<param-value>applets/SignedPrintPdfApplet.jar</param-value>
+    </context-param>
+
+    <context-param>
+    	<param-name>redirectionPathStartsso</param-name>
+    	<param-value>/Procton/sso</param-value>
+    </context-param>
+
+    <context-param>
+    	<param-name>redirectionPathSso</param-name>
+    	<param-value>/Procton/Procton.htm</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>Procton</servlet-name>
+        <servlet-class>IDServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Procton</servlet-name>
+        <url-pattern>/Procton.htm</url-pattern>
+		<!-- WebApi -->
+   
+		<url-pattern>/Rititola/*</url-pattern>
+		<url-pattern>/Rititola.json/*</url-pattern>
+		<url-pattern>/Rititola.xml/*</url-pattern>
+		
+		<url-pattern>/PulisciTitoliDocumenti/*</url-pattern>
+		<url-pattern>/PulisciTitoliDocumenti.json/*</url-pattern>
+		<url-pattern>/PulisciTitoliDocumenti.xml/*</url-pattern>
+		
+		<url-pattern>/DaFirmare/*</url-pattern>
+		<url-pattern>/DaFirmare.json/*</url-pattern>
+		<url-pattern>/DaFirmare.xml/*</url-pattern>
+		
+		<url-pattern>/CallBackFirmone/*</url-pattern>
+		<url-pattern>/CallBackFirmone.json/*</url-pattern>
+		<url-pattern>/CallBackFirmone.xml/*</url-pattern>
+
+		<url-pattern>/AllegatiGddocConverter/*</url-pattern>
+		<url-pattern>/AllegatiGddocConverter.json/*</url-pattern>
+		<url-pattern>/AllegatiGddocConverter.xml/*</url-pattern>
+		
+		<url-pattern>/IdoneitaParer/*</url-pattern>
+		<url-pattern>/IdoneitaParer.json/*</url-pattern>
+		<url-pattern>/IdoneitaParer.xml/*</url-pattern>
+        
+        <url-pattern>/PrendonePico/*</url-pattern>
+        <url-pattern>/PrendonePico.json/*</url-pattern>
+        <url-pattern>/PrendonePico.xml/*</url-pattern>
+		
+		<url-pattern>/GestisciIter/*</url-pattern>
+        <url-pattern>/GestisciIter.json/*</url-pattern>
+        <url-pattern>/GestisciIter.xml/*</url-pattern>
+        
+        <url-pattern>/GestisciIterProcton/*</url-pattern>
+        <url-pattern>/GestisciIterProcton.json/*</url-pattern>
+        <url-pattern>/GestisciIterProcton.xml/*</url-pattern>
+		
+		<url-pattern>/CancellaDocumentoIterProcton/*</url-pattern>
+        <url-pattern>/CancellaDocumentoIterProcton.json/*</url-pattern>
+        <url-pattern>/CancellaDocumentoIterProcton.xml/*</url-pattern>
+		
+		<url-pattern>/BabelDownloader/*</url-pattern>
+        <url-pattern>/BabelDownloader.json/*</url-pattern>
+        <url-pattern>/BabelDownloader.xml/*</url-pattern>
+        
+        <url-pattern>/GeneraProtocolloDaExt/*</url-pattern>
+        <url-pattern>/GeneraProtocolloDaExt.json/*</url-pattern>
+        <url-pattern>/GeneraProtocolloDaExt.xml/*</url-pattern>
+		
+		<url-pattern>/IdoneitaParerWebapi/*</url-pattern>
+        <url-pattern>/IdoneitaParerWebapi.json/*</url-pattern>
+        <url-pattern>/IdoneitaParerWebapi.xml/*</url-pattern>
+        
+        <url-pattern>/LanciaUpdateVisibilityString/*</url-pattern>
+        <url-pattern>/LanciaUpdateVisibilityString.json/*</url-pattern>
+        <url-pattern>/LanciaUpdateVisibilityString.xml/*</url-pattern>
+        
+        <url-pattern>/GestisciDestinatariDaRubricaInternauta/*</url-pattern>
+        <url-pattern>/GestisciDestinatariDaRubricaInternauta.json/*</url-pattern>
+        <url-pattern>/GestisciDestinatariDaRubricaInternauta.xml/*</url-pattern>
+		        
+        <url-pattern>/GetDatiProtocollazioneDocumento/*</url-pattern>
+        <url-pattern>/GetDatiProtocollazioneDocumento.json/*</url-pattern>
+        <url-pattern>/GetDatiProtocollazioneDocumento.xml/*</url-pattern>
+		
+		<url-pattern>/WebApiRicalcolaPrendibilita/*</url-pattern>
+        <url-pattern>/WebApiRicalcolaPrendibilita.json/*</url-pattern>
+        <url-pattern>/WebApiRicalcolaPrendibilita.xml/*</url-pattern>
+		
+		<url-pattern>/RipubblicaAttivitaWebApi/*</url-pattern>
+        <url-pattern>/RipubblicaAttivitaWebApi.json/*</url-pattern>
+        <url-pattern>/RipubblicaAttivitaWebApi.xml/*</url-pattern>
+				
+		<url-pattern>/WebApiAccodaEsecutoreSequenzialeMestieri/*</url-pattern>
+        <url-pattern>/WebApiAccodaEsecutoreSequenzialeMestieri.json/*</url-pattern>
+        <url-pattern>/WebApiAccodaEsecutoreSequenzialeMestieri.xml/*</url-pattern>
+		
+		<url-pattern>/GestioneProtocolloDaExt/*</url-pattern>
+        <url-pattern>/GestioneProtocolloDaExt.json/*</url-pattern>
+        <url-pattern>/GestioneProtocolloDaExt.xml/*</url-pattern>
+		
+		<url-pattern>/Utils/*</url-pattern>
+        <url-pattern>/Utils.json/*</url-pattern>
+        <url-pattern>/Utils.xml/*</url-pattern>
+		
+		<url-pattern>/EliminaPropostaDaEdi/*</url-pattern>
+        <url-pattern>/EliminaPropostaDaEdi.json/*</url-pattern>
+        <url-pattern>/EliminaPropostaDaEdi.xml/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Procton</servlet-name>
+        <url-pattern>/sso</url-pattern>
+    </servlet-mapping>
+
+    <!-- Intra-app comunication section -->
+    <servlet>
+        <servlet-name>C_Procton</servlet-name>
+        <servlet-class>IDServletCOM</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>C_Procton</servlet-name>
+        <url-pattern>/C_Procton.htm</url-pattern>
+    </servlet-mapping>
+   
+    <servlet>
+        <servlet-name>ReceiveSignedFile</servlet-name>
+        <servlet-class>FunzioniPubbliche.ReceiveSignedFile</servlet-class>
+    </servlet>   
+    
+    <servlet-mapping>
+        <servlet-name>ReceiveSignedFile</servlet-name>
+        <url-pattern>/ReceiveSignedFile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GrmWz</servlet-name>
+        <servlet-class>FunzioniPubbliche.GrmWz</servlet-class>
+    </servlet>   
+
+    <servlet-mapping>
+        <servlet-name>GrmWz</servlet-name>
+        <url-pattern>/startsso</url-pattern>
+    </servlet-mapping>
+
+    <!-- End Intra-app comunication section -->
+
+    
+    <listener>
+      <listener-class>IDSessionListener</listener-class>
+    </listener>
+    
+    <listener>
+      <listener-class>IDContextListener</listener-class>
+    </listener>
+</web-app>
+
+
